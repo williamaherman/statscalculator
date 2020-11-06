@@ -14,7 +14,7 @@ class MyTestCase(unittest.TestCase):
 
         for person in people:
             self.assertEqual(person.__name__, test_class.__name__)
-            pprint(vars(people))
+            pprint(vars(person))
 
 if __name__ == '__main__':
     unittest.main()
