@@ -16,6 +16,6 @@ No. |Task | Developer
 9| Helper Functions | .
 
 Statistical and Calculator Relationship Diagram
-- 1. Calculator Object
-  - 1. Properties
-    - 1. Result
+- 1.Calculator Object
+  - 1.Properties
+    - 1.Result
