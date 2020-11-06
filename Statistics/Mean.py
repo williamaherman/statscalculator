@@ -3,6 +3,7 @@ from Calculator.Addition import addition
 from Calculator.Division import division
 
 def mean(data):
+    # num values = length of data
     num_values = len(data)
     total = 0
     for num in data:
