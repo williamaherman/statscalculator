@@ -2,7 +2,7 @@
 /shelf/
 /workspace.xml
 # Datasource local storage ignored files
-/../../../../../../../../../:\Users\ajpdr\Google Drive\NJIT\.Fall 2020\IS-601 Web Developement\statscalculator\.idea/dataSources/
+/../../../../../../:\Users\wherman\PycharmProjects\statscalculator\.idea/dataSources/
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
