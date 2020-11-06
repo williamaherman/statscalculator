@@ -7,7 +7,7 @@ You need to create a project plan that includes:
 
 1.  A diagram or outline showing how each of the statistical and calculator functions relate to each other.  This should help you plan the order of the tasks.  You should show your instance class, static method class that "Wraps" calls the static functions, and the individual class and function for each operation.
 
-For example:
+For example
 
 Calculator Object
 Properties
