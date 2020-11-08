@@ -3,6 +3,7 @@ import unittest
 from numpy.random import seed
 from numpy.random import randint
 from Statistics.Statistics import Statistics
+from CsvReader.CsvReader import CsvReader
 import pprint
 
 
@@ -12,6 +13,7 @@ class MyTestCase(unittest.TestCase):
         self.testData = randint(0, 10, 20)
         self.mode_value = statistics.mode(self.testData)
         self.statistics = Statistics()
+        self.test_data_mode = CsvReader('Tests/Data/modeData.csv').data
 
 
     def test_instantiate_calculator(self):
