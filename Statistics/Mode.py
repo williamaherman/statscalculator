@@ -8,9 +8,9 @@ def mode(num):
         else:
             counter[n] = 1
     result = None
-    maxCount = 0
-    for k in counter.keys():
-        if counter[k] > maxCount:
-            maxCount = counter[k]
-            result = k
+    timeout = 0
+    for x in counter.keys():
+        if counter[x] > timeout:
+            timeout = counter[x]
+            result = x
     return float(result)

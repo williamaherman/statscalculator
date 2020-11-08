@@ -15,7 +15,6 @@ class MyTestCase(unittest.TestCase):
         self.statistics = Statistics()
         self.test_data_mode = CsvReader('Tests/Data/modeData.csv').data
 
-
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.statistics, Statistics)
 
