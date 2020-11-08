@@ -1,3 +1,4 @@
+import statistics
 import unittest
 from numpy.random import seed
 from numpy.random import randint
@@ -9,7 +10,9 @@ class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
         seed(5)
         self.testData = randint(0, 10, 20)
+        self.mode_value = statistics.mode(self.testData)
         self.statistics = Statistics()
+
 
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.statistics, Statistics)
@@ -19,7 +22,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(mean, 4.25)
 
     def test_mode_calculator(self):
-        mode = self.statistics.mean(self.testData)
+        mode = self.statistics.mode(self.testData)
         self.assertEqual(mode, self.mode_value)
 
 
