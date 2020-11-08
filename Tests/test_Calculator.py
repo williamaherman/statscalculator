@@ -1,4 +1,5 @@
 import unittest
+import sys
 
 from Calculator.Calculator import Calculator
 from CsvReader.CsvReader import CsvReader
@@ -21,6 +22,10 @@ class MyTestCase(unittest.TestCase):
     def test_results_property(self):
         self.assertEqual(self.calculator.result, 0)
 
+    def test_Mean(self):
+        self.assertEqual(round(statistics.mean(self.rand_test), 6), round(Mean.mean(self.rand_test), 6))
+        self.rand_test = self.rand_test + RandList.randListFloat(length=3, seed=1, lower=1, upper=100)
+        self.assertEqual(round(statistics.mean(self.rand_test), 6), round(Mean.mean(self.rand_test), 6))
 
 if __name__ == '__main__':
     unittest.main()
