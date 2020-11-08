@@ -1,15 +1,16 @@
-def mode (data):
-    data1 = data
-    maximum = data1.count(data1[0])
-    m = data1[0]
-    for i in range(1, len(data1)):
-        freq = data1.count(data[i])
+from Calculator.Addition import addition
 
-        if freq > maximum:
-            maximum = freq
-            m = data1[i]
-
+def mode(num):
+    counter = {}
+    for n in num:
+        if n in counter:
+            counter[n] = addition(counter[n],1)
         else:
-            pass
-
-    return m
+            counter[n] = 1
+    result = None
+    maxCount = 0
+    for k in counter.keys():
+        if counter[k] > maxCount:
+            maxCount = counter[k]
+            result = k
+    return float(result)
