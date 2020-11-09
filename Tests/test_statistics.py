@@ -15,6 +15,7 @@ class MyTestCase(unittest.TestCase):
         self.modeData = CsvReader('Tests/Data/modeData.csv').data
         self.medianData = CsvReader('Tests/Data/medianData.csv').data
         self.varianceData = CsvReader('Tests/Data/varianceData.csv').data
+        self.standardDeviationData = CsvReader('Tests/Data/standdev.csv').data
 
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.statistics, Statistics)
@@ -56,6 +57,16 @@ class MyTestCase(unittest.TestCase):
                 self.assertEqual(self.statistics.variance(data), float(result))
             print("Variance Tested Successfully!")
 
+    def test_standard_deviation_statistics(self):
+        for row in self.standardDeviationData:
+            result = row["StandardDeviation"]
+            data = []
+            keys = row.keys()
+            for k in keys:
+                if k != "StandardDev":
+                    data.append(row[k])
+            self.assertEqual(self.statistics.standardDeviation(data), float(result))
+        print("Standard Deviation Tested Successfully!")
 
 if __name__ == '__main__':
     unittest.main()
