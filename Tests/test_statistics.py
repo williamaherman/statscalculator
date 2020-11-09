@@ -22,29 +22,27 @@ class MyTestCase(unittest.TestCase):
         mean = self.statistics.mean(self.testData)
         self.assertEqual(mean, 4.25)
 
-    def test_mode_statistics(self):
-        for row in self.modeData:
-            result = row["Mode"]
-            data = []
-            keys = row.keys()
-            for x in keys:
-                if x != "Mode":
-                    data.append(row[x])
-            self.assertEqual(self.statistics.mode(data), float(result))
-        print("Mode Tested Successfully!")
-
-
     def test_median_statistics(self):
         for row in self.medianData:
             result = row["Median"]
             data = []
             keys = row.keys()
-            for x in keys:
-                if x != "Median":
-                    data.append(row[x])
-                self.assertEqual(self.statistics.median(data), float(result))
-            print("Median Tested Successfully!")
+            for k in keys:
+                if k != "Median":
+                    data.append(row[k])
+            self.assertEqual(self.statistics.median(data), float(result))
+        print("Median Test Passed")
 
+    def test_mode_statistics(self):
+        for row in self.modeData:
+            result = row["Mode"]
+            data = []
+            keys = row.keys()
+            for k in keys:
+                if k != "Mode":
+                    data.append(row[k])
+            self.assertEqual(self.statistics.mode(data), float(result))
+        print("Mode Test Passed")
 
 
 if __name__ == '__main__':
