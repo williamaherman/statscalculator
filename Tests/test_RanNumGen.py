@@ -62,7 +62,7 @@ print ("Randomly selected item from list:", an_item)
 random.seed(2)
 aList = [1 , 2, 3, 4, 5, 6, 7, 8, 9, 10]
 sampled_list = random.sample(aList, 2)
-print("2 values from a list using seed of 2: ", sampled_list)
+print("2 values from a list of 2 using seed : ", sampled_list)
 
 # 6. Select N number of items from a list without a seed
 
