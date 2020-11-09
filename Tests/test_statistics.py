@@ -14,6 +14,7 @@ class MyTestCase(unittest.TestCase):
         self.mode_value = statistics.mode(self.testData)
         self.statistics = Statistics()
         self.test_data_mode = CsvReader('Tests/Data/modeData.csv').data
+        self.test_data_mode = CsvReader('Tests/Data/medianData.csv').data
 
 
     def test_instantiate_calculator(self):
