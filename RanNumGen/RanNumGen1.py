@@ -1,13 +1,12 @@
+import random
+
 # 1. Generate a random number without a seed between a range of two numbers - Both Integer and Decimal
 
 # 2.Generate a random number with a seed between a range of two numbers - Both Integer and Decimal
 
-import random
-
 #Random integer from 20 to 100
-print("Random integer from 20 to 100")
 num1 = random.randint(20, 100)
-print("Random integer: ", num1)
+print("Random integer between 20 & 100: ", num1)
 
 # Random decimal float from 10 to 999.9
 int_num = random.choice(range(100, 10000))
@@ -23,7 +22,7 @@ for i in range(0, 10):
     xint = round(random.uniform(50.50, 500.50), 0)
     randomFloatList.append(xint)
 
-print("Printing list of 10 random decimal numbers")
+print("List of 10 random integer numbers")
 print(randomFloatList)
 
 
