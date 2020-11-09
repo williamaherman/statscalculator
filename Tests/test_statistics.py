@@ -4,7 +4,7 @@ from numpy.random import seed
 from numpy.random import randint
 from Statistics.Statistics import Statistics
 from CsvReader.CsvReader import CsvReader
-import pprint
+from pprint import pprint
 
 
 class MyTestCase(unittest.TestCase):
@@ -12,9 +12,8 @@ class MyTestCase(unittest.TestCase):
         seed(5)
         self.testData = randint(0, 10, 20)
         self.statistics = Statistics()
-        self.modeData= CsvReader('Tests/Data/modeData.csv').data
+        self.modeData = CsvReader('Tests/Data/modeData.csv').data
         self.medianData = CsvReader('Tests/Data/medianData.csv').data
-
 
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.statistics, Statistics)
@@ -34,6 +33,7 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.statistics.mode(data), float(result))
         print("Mode Tested Successfully!")
 
+
     def test_median_statistics(self):
         for row in self.medianData:
             result = row["Median"]
@@ -44,6 +44,7 @@ class MyTestCase(unittest.TestCase):
                     data.append(row[x])
                 self.assertEqual(self.statistics.median(data), float(result))
             print("Median Tested Successfully!")
+
 
 
 if __name__ == '__main__':
