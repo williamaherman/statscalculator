@@ -14,6 +14,7 @@ class MyTestCase(unittest.TestCase):
         self.statistics = Statistics()
         self.modeData = CsvReader('Tests/Data/modeData.csv').data
         self.medianData = CsvReader('Tests/Data/medianData.csv').data
+        self.varianceData = CsvReader('Tests/Data/varianceData.csv').data
 
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.statistics, Statistics)
@@ -31,7 +32,7 @@ class MyTestCase(unittest.TestCase):
                 if k != "Median":
                     data.append(row[k])
             self.assertEqual(self.statistics.median(data), float(result))
-        print("Median Test Passed")
+        print("Median Tested Successfully!")
 
     def test_mode_statistics(self):
         for row in self.modeData:
@@ -42,7 +43,18 @@ class MyTestCase(unittest.TestCase):
                 if k != "Mode":
                     data.append(row[k])
             self.assertEqual(self.statistics.mode(data), float(result))
-        print("Mode Test Passed")
+        print("Mode Tested Successfully!")
+
+    def test_variance(self):
+            for row in self.varianceData:
+                result = row["Variance"]
+                data = []
+                keys = row.keys()
+                for k in keys:
+                    if k != "Variance":
+                        data.append(row[k])
+                self.assertEqual(self.statistics.variance(data), float(result))
+            print("Variance Tested Successfully!")
 
 
 if __name__ == '__main__':
