@@ -14,6 +14,11 @@ No. |Task | Developer
 7| Standard Deviation | William Herman
 8| Z Score | William Herman
 9| Helper Functions | W. Herman & A. Drumm
+10 | Simple Random Sampling | .
+11 Confidence Interval For a Sample | .
+12| Cochran’s Sample Size Formula | .
+13| Simple Random Sampling | .
+14 | How to Find a Sample Size Given a Confidence Interval and Width (unknown population standard deviation) |. 
 
 Statistical and Calculator Relationship Diagram
 - 1.Calculator Object
