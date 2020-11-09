@@ -3,6 +3,7 @@ from Statistics.Mean import mean
 from Statistics.Mode import mode
 from Statistics.Median import median
 from Statistics.Variance import variance
+from Statistics.Zscore import zscore
 
 class Statistics(Calculator):
     data = []
@@ -24,4 +25,8 @@ class Statistics(Calculator):
 
     def variance(self, data):
         self.result = variance(data)
+        return self.result
+
+    def zscore(self, data):
+        self.result = zscore(data)
         return self.result
