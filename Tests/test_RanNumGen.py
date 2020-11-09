@@ -30,8 +30,8 @@ print("Random decimal between 10 & 100 with seed:", float_num)
 # Integer
 randomIntList = []
 # Set a length of the list to 10 and range from 1 to 100
+random.seed(datetime)
 for i in range(0, 10):
-    random.seed(datetime)
     xint = random.randint(1,100)
     randomIntList.append(xint)
 
@@ -42,6 +42,7 @@ print(randomIntList)
 #Decimal
 randomDecList = []
 # Set a length of the list to 10
+random.seed(datetime)
 for i in range(0, 10):
     xdec = round(random.uniform(10, 100), 2)
     randomDecList.append(xdec)
@@ -62,7 +63,7 @@ print ("Randomly selected item from list:", an_item)
 random.seed(2)
 aList = [1 , 2, 3, 4, 5, 6, 7, 8, 9, 10]
 sampled_list = random.sample(aList, 2)
-print("2 values from a list using seed of 2: ", sampled_list)
+print("2 values from a list of 2 using seed : ", sampled_list)
 
 # 6. Select N number of items from a list without a seed
 
