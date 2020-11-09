@@ -30,8 +30,8 @@ print("Random decimal between 10 & 100 with seed:", float_num)
 # Integer
 randomIntList = []
 # Set a length of the list to 10 and range from 1 to 100
+random.seed(datetime)
 for i in range(0, 10):
-    random.seed(datetime)
     xint = random.randint(1,100)
     randomIntList.append(xint)
 
@@ -42,6 +42,7 @@ print(randomIntList)
 #Decimal
 randomDecList = []
 # Set a length of the list to 10
+random.seed(datetime)
 for i in range(0, 10):
     xdec = round(random.uniform(10, 100), 2)
     randomDecList.append(xdec)
