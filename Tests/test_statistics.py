@@ -11,7 +11,6 @@ class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
         seed(5)
         self.testData = randint(0, 10, 20)
-        self.mode_value = statistics.mode(self.testData)
         self.statistics = Statistics()
         self.modeData = CsvReader('Tests/Data/modeData.csv').data
         self.medianData = CsvReader('Tests/Data/medianData.csv').data
@@ -32,7 +31,8 @@ class MyTestCase(unittest.TestCase):
                 if x != "Mode":
                     data.append(row[x])
             self.assertEqual(self.statistics.mode(data), float(result))
-        print("Mode Test Passed")
+        print("Mode Tested Successfully!")
+
 
     def test_median_statistics(self):
         for row in self.medianData:
@@ -42,8 +42,9 @@ class MyTestCase(unittest.TestCase):
             for x in keys:
                 if x != "Median":
                     data.append(row[x])
-            self.assertEqual(self.statistics.median(data), float(result))
-        print("Median Tested Successfully")
+                self.assertEqual(self.statistics.median(data), float(result))
+            print("Median Tested Successfully!")
+
 
 
 if __name__ == '__main__':
