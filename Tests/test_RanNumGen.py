@@ -11,7 +11,7 @@ print("Random integer between 20 & 100: ", num1)
 # Random decimal float from 10 to 999.9
 int_num = random.choice(range(100, 10000))
 float_num = int_num/100
-print(float_num)
+print("Random decimal number between 10 & 1000:", float_num)
 
 # 3. Generate a list of N random numbers with a seed and between a range of numbers - Both Integer and Decimal
 
@@ -33,7 +33,7 @@ for i in range(0, 10):
     xdec = round(random.uniform(50.50, 500.50), 5)
     randomFloatList.append(xdec)
 
-print("Printing list of 10 random decimal numbers")
+print("List of 10 random decimal numbers")
 print(randomFloatList)
 
 
@@ -42,14 +42,13 @@ print(randomFloatList)
 a_list = ['RandomItem1', 'RandomItem2', 'RandomItem3', 'RandomItem4', 'RandomItem5']
 
 an_item = random.choice(a_list)
-print ("Randomly selected item from list is - ", an_item)
+print ("Randomly selected item from list:", an_item)
 
 # 5. Set a seed and randomly select the same value from a list
 
 aList = [1 , 2, 3, 4, 5, 6, 7, 8, 9, 10]
-print ("Choosing 2 random items from a list using random.sample() function")
 sampled_list = random.sample(aList, 2)
-print(sampled_list)
+print("Choosing 2 random items from a list using random.sample() function:", sampled_list)
 
 # 6. Select N number of items from a list without a seed
 
