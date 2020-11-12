@@ -9,4 +9,4 @@ class MarginOfError:
             raise ValueError("Data list can not be empty")
         zsc = Zscore.zscore(seed, data)
         stddev = StandardDeviation.standardDeviation(data)
-        return zsc * stddev
+        return ZScore * standardDeviation
