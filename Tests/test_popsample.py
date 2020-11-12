@@ -7,6 +7,7 @@ from PopulationSample.MarginOfError import MarginOfError
 from PopulationSample.SimpleRandom import SimpleRandom
 
 
+
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
         self.test = [1, 2, 3, 4, 5, 6]

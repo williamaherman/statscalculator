@@ -1,6 +1,5 @@
+from Statistics import Zscore, StandardDeviation
 from Statistics.StandardDeviation import standardDeviation
-from Statistics.Zscore import zscore
-
 
 class MarginOfError:
     @staticmethod
@@ -9,4 +8,4 @@ class MarginOfError:
             raise ValueError("Data list can not be empty")
         zsc = Zscore.zscore(seed, data)
         stddev = StandardDeviation.standardDeviation(data)
-        return ZScore * standardDeviation
+        return Zscore * standardDeviation

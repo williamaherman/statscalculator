@@ -4,18 +4,18 @@ from Statistics.StandardDeviation import standardDeviation
 from Statistics.Mean import mean
 
 def zscore(num):
-    Mean_var = mean(num)
+    meanEst = mean(num)
     standardDeviation_var = standardDeviation(num)
 
     negative = []
-    for Raw_var in num:
-        meanRaw = subtraction(Mean_var, Raw_var)
-        negative.append(meanRaw)
+    for var in num:
+        meaneasy = subtraction(meanEst, var)
+        negative.append(meaneasy)
 
-    ZScore_var = []
+    ZScore_fun = []
     for neg in negative:
         z = division(standardDeviation_var, neg)
-        ZScore_var.append(z)
+        ZScore_fun.append(z)
 
 
-    return ZScore_var
+    return ZScore_fun
