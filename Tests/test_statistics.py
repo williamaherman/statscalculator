@@ -66,8 +66,8 @@ class MyTestCase(unittest.TestCase):
      results = []
      for row in self.ZscoreData:
          results.append(float(row['Zscores']))
-     self.assertEqual((self.statistics.Zscore(data_var)), results)
-print("Variance Tested Successfully!")
+     self.assertEqual((self.statistics.zscore(data_var)), results)
+print("Zscore Tested Successfully!")
 
     def test_standard_deviation_statistics(self):
         for row in self.standardDeviationData:
