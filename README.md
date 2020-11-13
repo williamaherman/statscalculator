@@ -7,7 +7,7 @@ No. |Task | Developer
 --- | ------------ | ------------- |
 1| Task List | Andrew Drumm
 2| Diagram/Outline of Functions | .
-3| Random Number Generator | Andrew Drumm
+3| Random Number Generator| Andrew Drumm
 4| Mean | 
 5| Mode | William Herman
 6| Variance | William Herman
@@ -16,9 +16,11 @@ No. |Task | Developer
 9| Helper Functions | .
 10 | Simple Random Sampling | .
 11 | Confidence Interval For a Sample | .
-12| Cochran’s Sample Size Formula | .
-13| Simple Random Sampling | .
-14 | How to Find a Sample Size Given a Confidence Interval and Width (unknown population standard deviation) |. 
+12 | Margin of Error | Andrew Drumm
+13| Cochran’s Sample Size Formula | .
+14| Simple Random Sampling | .
+15 | How to Find a Sample Size Given a Confidence Interval and Width (unknown population standard deviation) |. 
+16 | Ranodom Number Generator Helper Functions | Andrew Drumm
 
 Statistical and Calculator Relationship Diagram
 - 1.Calculator Object
