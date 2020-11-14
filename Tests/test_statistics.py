@@ -15,7 +15,7 @@ class MyTestCase(unittest.TestCase):
         self.modeData = CsvReader('Tests/Data/modeData.csv').data
         self.medianData = CsvReader('Tests/Data/medianData.csv').data
         self.varianceData = CsvReader('Tests/Data/varianceData.csv').data
-        self.ZscoreData = CsvReader('Tests/Data/zScoreData.csv').data
+        self.ZscoreData = CsvReader('Tests/Data/zscoredata.csv').data
         self.standardDeviationData = CsvReader('Tests/Data/standdev.csv').data
 
     def test_instantiate_calculator(self):
@@ -60,14 +60,14 @@ class MyTestCase(unittest.TestCase):
 
     def test_zscore_statistics(self):
      data = []
-     for row in self.ZscoreData:
-         data.append(float(row['Zvalues']))
+     for row in self.zscoredata:
+         data.append(float(row['Value']))
      data_var = data[0:10]
-     results = []
+     results = row["Result"]
      for row in self.ZscoreData:
          results.append(float(row['Zscores']))
      self.assertEqual((self.statistics.zscore(data_var)), results)
-print("Zscore Tested Successfully!")
+    print("Zscore Tested Successfully!")
 
     def test_standard_deviation_statistics(self):
         for row in self.standardDeviationData:
