@@ -3,14 +3,14 @@ from Statistics.Mean import mean
 from Statistics.StandardDeviation import standardDeviation
 
 
-def top_interval(num):
+def bottom_interval(num):
     try:
         num_values = len(num)
         z = 1.96
         sd = standardDeviation(num)
         avg = mean(num)
-        return round(avg + (z * sd / square_root(num_values)), 5)
+        return round(avg - (z * sd / square_root(num_values)), 5)
     except ZeroDivisionError:
-        print("Error: Cannot divide by 0")
+        print("Error: Can't Divide by 0")
     except ValueError:
-        print("Error: Check data input")
+        print("Error: Check your data inputs")

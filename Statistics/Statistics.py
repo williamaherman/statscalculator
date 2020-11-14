@@ -5,6 +5,8 @@ from Statistics.Median import median
 from Statistics.Variance import variance
 from Statistics.Zscore import zscore
 from Statistics.StandardDeviation import standardDeviation
+from PopulationSample.ConfidenceIntervalTop import top_interval
+from PopulationSample.ConfidenceIntervalBottom import bottom_interval
 
 class Statistics(Calculator):
     data = []
@@ -33,5 +35,14 @@ class Statistics(Calculator):
 
     def standardDeviation(self, data):
         self.result = standardDeviation(data)
+        return self.result
+
+    def confidence_interval_top(self, data):
+        self.result = top_interval(data)
+        return self.result
+
+    def confidence_interval_bottom(self, data):
+        self.result = bottom_interval(data)
+        return self.result
 
         return self.result

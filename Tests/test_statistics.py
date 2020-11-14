@@ -1,10 +1,10 @@
-import statistics
 import unittest
 from numpy.random import seed
 from numpy.random import randint
 from Statistics.Statistics import Statistics
 from CsvReader.CsvReader import CsvReader
 from pprint import pprint
+from RanNumGen.RanNumGenHelper import ListPick
 
 
 class MyTestCase(unittest.TestCase):
@@ -79,6 +79,15 @@ print("Zscore Tested Successfully!")
                     data.append(row[k])
             self.assertEqual(self.statistics.standardDeviation(data), float(result))
         print("Standard Deviation Tested Successfully!")
+
+
+    def test_confidence_interval(self):
+        for row in self.test_answer:
+            pprint(row['ci_top'])
+            pprint(row['ci_bottom'])
+        self.assertEqual(self.statistics.confidence_top_interval(self.column1), float(row['ci_top']))
+        self.assertEqual(self.statistics.confidence_bottom_interval(self.column1), float(row['ci_bottom']))
+        print("Confidence Intervals Tested Successfully!")
 
 if __name__ == '__main__':
     unittest.main()
