@@ -8,7 +8,7 @@ No. |Task | Developer
 1| Task List | Andrew Drumm
 2| Diagram/Outline of Functions | .
 3| Random Number Generator| Andrew Drumm
-4| Mean | 
+4| Mean | William Herman
 5| Mode | William Herman
 6| Variance | William Herman
 7| Standard Deviation | William Herman
