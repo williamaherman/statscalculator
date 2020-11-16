@@ -18,9 +18,8 @@ No. |Task | Developer
 11 | Confidence Interval For a Sample | .
 12 | Margin of Error | Andrew Drumm
 13| Cochran’s Sample Size Formula | .
-14| Simple Random Sampling | .
-15 | How to Find a Sample Size Given a Confidence Interval and Width (unknown population standard deviation) |. 
-16 | Ranodom Number Generator Helper Functions | Andrew Drumm
+14 | How to Find a Sample Size Given a Confidence Interval and Width (unknown population standard deviation) |. 
+15 | Ranodom Number Generator Helper Functions | Andrew Drumm
 
 Statistical and Calculator Relationship Diagram
 - 1.Calculator Object
