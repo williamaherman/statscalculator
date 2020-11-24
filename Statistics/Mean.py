@@ -1,11 +1,10 @@
+import numpy
 
-from Calculator.Addition import addition
-from Calculator.Division import division
+class Mean:
 
-def mean(data):
-    # num values = length of data
-    num_values = len(data)
-    total = 0
-    for num in data:
-        total = addition(total, num)
-    return division(num_values, total)
+
+    def mean(data):
+        # empty data list error
+        if len(data)==0:
+            raise ValueError("Data list can not be empty")
+        return numpy.mean(data)
